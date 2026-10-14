@@ -1,0 +1,99 @@
+
+dt {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 25px; /* 让每个项目之间有呼吸感 */
+    color: #2c3e50;   /* 深蓝色，显得沉稳 */
+}
+
+/* 2. 给项目描述（dd）缩进，并加一条左侧的装饰线 */
+dd {
+    margin-left: 10px;        /* 稍微往右缩进一点 */
+    margin-top: 5px;          /* 和标题拉近一点 */
+    padding-left: 15px;       /* 文字和左侧线条的距离 */
+    border-left: 3px solid #3498db; /* 左边加一条蓝色的竖线！瞬间变好看 */
+    color: #555;              /* 字体稍微浅一点，有层次感 */
+    line-height: 1.5;
+}
+
+/* 3. 把整个 dl 块居中，不要让它贴着屏幕左边 */
+main {
+    max-width: 600px;   /* 限制宽度 */
+    margin: 0 auto;     /* 居中 */
+    padding: 20px;
+}
+
+/* 1. 把整个网页的基础字体改好看，去掉四周难看的默认白边 */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* 使用更现代的无衬线字体 */
+    line-height: 1.6; /* 让文字行距变宽一点，不挤在一起 */
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* 淡淡的灰白色背景，比纯白护眼 */
+    color: #333; /* 文字用深灰色，比纯黑更柔和 */
+}
+
+/* 2. 把顶部导航栏（header）弄成黑色或者深色的横条 */
+header {
+    background-color: #2c3e50; /* 深蓝灰色，显得专业 */
+    color: white;
+    padding: 20px;
+    display: flex; /* 让 Logo 和导航并排显示 */
+    justify-content: space-between; /* 左右两边分开对齐 */
+    align-items: center;
+}
+
+/* 3. 让 Logo 那一块（div#logo）里面的字和图标对齐 */
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 图标和文字之间留点空隙 */
+}
+
+/* 4. 去掉列表前面的小黑点，让导航变成横向的 */
+nav ul {
+    list-style: none; /* 去掉默认的圆点 */
+    margin: 0;
+    padding: 0;
+    display: flex; /* 让列表项横向排列 */
+    gap: 20px; /* 每个链接之间的间距 */
+}
+
+/* 5. 美化导航栏里的链接（去掉下划线，改颜色） */
+nav a {
+    color: #ecf0f1; /* 浅灰白色 */
+    text-decoration: none; /* 去掉难看的默认下划线 */
+    font-weight: bold;
+    transition: color 0.3s; /* 鼠标放上去有平滑变色的效果 */
+}
+
+/* 鼠标悬停在链接上时，变色提醒 */
+nav a:hover {
+    color: #3498db; /* 变成漂亮的蓝色 */
+}
+
+/* 6. 主内容区（main）留点白边，别贴着屏幕边缘 */
+main {
+    max-width: 800px; /* 内容最宽 800 像素，太宽了阅读很累 */
+    margin: 40px auto; /* 上下留白 40px，左右自动居中 */
+    padding: 20px;
+    background-color: white; /* 主体内容用白底，和背景区分开 */
+    border-radius: 8px; /* 加一点圆角，显得温柔 */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 给白底加一点点淡淡的阴影，有立体感 */
+}
+
+/* 7. 美化标题 */
+h1 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db; /* 标题下面加一条蓝线 */
+    padding-bottom: 10px;
+}
+
+/* 8. 美化正文里的链接 */
+main a {
+    color: #3498db;
+    text-decoration: none;
+}
+main a:hover {
+    text-decoration: underline; /* 正文里的链接悬停时加下划线 */
+}
