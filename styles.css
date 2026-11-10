@@ -1,47 +1,143 @@
+:root {
+  --bg: #f4f1ea;
+  --card: #ffffff;
+  --ink: #1a1a1a;
+  --accent: #213a2c;
+  --gold: #b08a5a;
+  --line: #e6e1d6;
+}
+
+* { box-sizing: border-box; }
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #badcda;
-    margin: 0;
-    padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  margin: 0;
+  padding: 40px 24px 80px;
+  -webkit-font-smoothing: antialiased;
 }
 
+/* 顶部导航 */
+#site-header {
+  max-width: 1100px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+#site-header nav {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+}
+
+#site-header nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  transition: color 0.2s;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+}
+
+#site-header nav a:hover {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* 网格排版 */
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
 }
 
+/* 卡片 */
 .quote {
-    width: 300px;
-    border: 1px solid #7e94a8;
-    border-radius: 12px;
-    padding: 24px;
-    background-color: #000;
-    color: #ccf2d9;
-    font-size: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 40px 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 260px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.highlight {
-    background-color: #848e99;
-    color: #ece8e8;
+.quote:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.06);
 }
 
-footer {
-    width: 100%;
-    margin-top: 16px;
-    font-size: 0.9rem;
-    opacity: 0.7;
-    text-align: right;
+.quote blockquote {
+  margin: 0;
 }
-.hero.img {
-  width: 100%;
-  height: 20rem;
-  object-fit: cover;
-  border-radius: 10px;
+
+.quote blockquote p {
+  font-family: "Playfair Display", Georgia, "Songti SC", serif;
+  font-size: 1.35rem;
+  line-height: 1.7;
+  margin: 0;
+  color: var(--ink);
+}
+
+/* 作者与引号 */
+.quote footer {
+  margin-top: 35px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--line);
+}
+
+.quote footer cite {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--accent);
+  position: relative;
+  display: inline-block;
+  padding-left: 18px; 
+  z-index: 2;
+}
+.quote footer .source {
+    display: none !important;
+}
+
+.quote footer cite::before {
+  content: "“";
+  font-family: Georgia, serif;
+  font-size: 2.8rem;
+  color: var(--gold);
+  position: absolute;
+  top: -14px;
+  left: -4px;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+/* 高亮卡片 */
+.quote.highlight {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.quote.highlight blockquote p {
+  color: #fdfcf9;
+}
+
+.quote.highlight footer {
+  border-top-color: rgba(255,255,255,0.15);
+}
+
+.quote.highlight footer cite {
+  color: #ffffff;
+}
+
+.quote.highlight footer cite::before {
+  color: #d1b894;
 }

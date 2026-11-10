@@ -3,7 +3,7 @@ dt {
     font-weight: bold;
     font-size: 18px;
     margin-top: 25px; /* 让每个项目之间有呼吸感 */
-    color: #2c3e50;   /* 深蓝色，显得沉稳 */
+    color: #748aa0;   /* 深蓝色，显得沉稳 */
 }
 
 /* 2. 给项目描述（dd）缩进，并加一条左侧的装饰线 */
@@ -61,16 +61,20 @@ nav ul {
 
 /* 5. 美化导航栏里的链接（去掉下划线，改颜色） */
 nav a {
-    color: #ecf0f1; /* 浅灰白色 */
+    color: #ffffff; /* 【改这里】换成纯白色，绝对亮眼 */
     text-decoration: none; /* 去掉难看的默认下划线 */
     font-weight: bold;
+    letter-spacing: 1px; /* 【加一句】字间距拉开一点，看着更高级 */
+    text-shadow: 0 0 5px rgba(255,255,255,0.3); /* 【加一句】加一点点微弱的发光，防止融进背景 */
     transition: color 0.3s; /* 鼠标放上去有平滑变色的效果 */
 }
 
 /* 鼠标悬停在链接上时，变色提醒 */
 nav a:hover {
-    color: #3498db; /* 变成漂亮的蓝色 */
+    color: #3498db; /* 依然是悬停变亮蓝色 */
+    text-shadow: none; /* 悬停时去掉发光，显得更干脆 */
 }
+
 
 /* 6. 主内容区（main）留点白边，别贴着屏幕边缘 */
 main {
